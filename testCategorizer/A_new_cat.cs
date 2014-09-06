@@ -52,20 +52,24 @@ namespace testCategorizer
     public class A_trained_cat
     {
         readonly string _validCatName = "N.N.";
+        private Cat trainedCat;
+
+        [SetUp]
+        public void Setup()
+        {
+            trainedCat = new Cat(_validCatName);
+            trainedCat.Train();
+        }
 
         [Test]
         public void Rejects_further_training()
         {
-            var trainedCat = new Cat(_validCatName);
-            trainedCat.Train();
             Assert.That(() => trainedCat.Train(), Throws.InvalidOperationException);
         }
 
         [Test]
         public void Can_sing()
         {
-            var trainedCat = new Cat(_validCatName);
-            trainedCat.Train();
             Assert.That(string.IsNullOrWhiteSpace(trainedCat.Song), Is.False);
         }
     }
