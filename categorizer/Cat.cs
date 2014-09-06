@@ -20,6 +20,7 @@ namespace Categorizer
         {
             if (IsTrained) { throw new InvalidOperationException("A cat can only be trained once.");}
             IsTrained = true;
+            Song = "Meow";
         }
     }
 }

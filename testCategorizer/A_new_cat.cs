@@ -60,7 +60,14 @@ namespace testCategorizer
             trainedCat.Train();
             Assert.That(() => trainedCat.Train(), Throws.InvalidOperationException);
         }
-        [Test] public void Can_sing() { }
+
+        [Test]
+        public void Can_sing()
+        {
+            var trainedCat = new Cat(_validCatName);
+            trainedCat.Train();
+            Assert.That(string.IsNullOrWhiteSpace(trainedCat.Song), Is.False);
+        }
     }
 
     [TestFixture]
