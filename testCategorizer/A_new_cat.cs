@@ -10,10 +10,24 @@ namespace testCategorizer
     [TestFixture]
     public class A_new_cat
     {
-        [Test] public void Gets_an_id() { }
+        [Test] public void Gets_an_id()
+        {
+            var cat = new Cat("N.N.");
+            Assert.That(cat.Id, Is.Not.Null);
+        }
         [Test] public void Must_be_given_a_name() { }
         [Test] public void Has_no_song() { }
         [Test] public void Can_be_trained() { }
+    }
+
+    public class Cat
+    {
+        public Cat(string name)
+        {
+            Id = Guid.NewGuid();
+        }
+
+        public Guid Id { get; private set; }
     }
 
     [TestFixture]
