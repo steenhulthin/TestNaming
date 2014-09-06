@@ -20,7 +20,9 @@ namespace testCategorizer
         [Test]
         public void Must_be_given_a_name()
         {
-            
+            Assert.That(() => new Cat(null), Throws.ArgumentException);
+            Assert.That(() => new Cat(string.Empty), Throws.ArgumentException);
+            Assert.That(() => new Cat(" "), Throws.ArgumentException);
         }
         [Test] public void Has_no_song() { }
         [Test] public void Can_be_trained() { }

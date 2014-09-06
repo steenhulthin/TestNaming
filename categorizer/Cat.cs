@@ -6,6 +6,7 @@ namespace Categorizer
     {
         public Cat(string name)
         {
+            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("name");
             Id = Guid.NewGuid();
         }
 
