@@ -34,10 +34,15 @@ namespace testCategorizer
         }
 
         [Test]
+        public void Is_untrained()
+        {
+            Assert.That(new Cat(_validCatName).IsTrained, Is.False);
+        }
+
+        [Test]
         public void Can_be_trained()
         {
             var cat = new Cat(_validCatName);
-            Assert.That(cat.IsTrained, Is.False);
             cat.Train();
             Assert.That(cat.IsTrained);
         }
