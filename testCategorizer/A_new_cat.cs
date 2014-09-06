@@ -80,7 +80,10 @@ namespace testCategorizer
         [Test]
         public void Sings_the_Nyan_cat_song()
         {
-            
+            var nyanCat = new Cat("Nyan");
+            nyanCat.Train();
+            var nyancatSong = "Nyan, nyan, nyan!";
+            Assert.That(nyanCat.Song, Is.EqualTo(nyancatSong));
         }
     }
 }

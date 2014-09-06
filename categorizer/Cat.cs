@@ -4,8 +4,11 @@ namespace Categorizer
 {
     public class Cat
     {
+        private readonly string _name;
+
         public Cat(string name)
         {
+            _name = name;
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("name");
             Id = Guid.NewGuid();
             Song = string.Empty;
@@ -20,7 +23,14 @@ namespace Categorizer
         {
             if (IsTrained) { throw new InvalidOperationException("A cat can only be trained once.");}
             IsTrained = true;
-            Song = "Meow";
+            if (_name.ToLowerInvariant() == "nyan")
+            {
+                Song = "Nyan, nyan, nyan!";
+            }
+            else
+            {
+                Song = "Meow";
+            }
         }
     }
 }
