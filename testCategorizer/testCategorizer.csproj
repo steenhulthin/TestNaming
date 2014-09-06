@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\categorizer\categorizer.csproj">
+    <ProjectReference Include="..\categorizer\Categorizer.csproj">
       <Project>{92632fc5-451b-4890-9ade-d894a7ecf9f2}</Project>
-      <Name>categorizer</Name>
+      <Name>Categorizer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

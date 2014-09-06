@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "categorizer", "categorizer\categorizer.csproj", "{92632FC5-451B-4890-9ADE-D894A7ECF9F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categorizer", "categorizer\Categorizer.csproj", "{92632FC5-451B-4890-9ADE-D894A7ECF9F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testCategorizer", "testCategorizer\testCategorizer.csproj", "{E3FD13EF-B6AB-4BB4-857F-CC856849410F}"
 EndProject

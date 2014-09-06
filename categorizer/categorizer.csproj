@@ -7,8 +7,8 @@
     <ProjectGuid>{92632FC5-451B-4890-9ADE-D894A7ECF9F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>categorizer</RootNamespace>
-    <AssemblyName>categorizer</AssemblyName>
+    <RootNamespace>Categorizer</RootNamespace>
+    <AssemblyName>Categorizer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

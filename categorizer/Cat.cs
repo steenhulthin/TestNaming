@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace testCategorizer
+namespace Categorizer
 {
     public class Cat
     {
