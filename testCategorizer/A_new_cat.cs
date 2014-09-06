@@ -11,9 +11,11 @@ namespace testCategorizer
     [TestFixture]
     public class A_new_cat
     {
+        readonly string _validCatName = "N.N.";
+
         [Test] public void Gets_an_id()
         {
-            var cat = new Cat("N.N.");
+            var cat = new Cat(_validCatName);
             Assert.That(cat.Id, Is.Not.EqualTo(Guid.Empty));
         }
 
@@ -24,7 +26,12 @@ namespace testCategorizer
             Assert.That(() => new Cat(string.Empty), Throws.ArgumentException);
             Assert.That(() => new Cat(" "), Throws.ArgumentException);
         }
-        [Test] public void Has_no_song() { }
+
+        [Test]
+        public void Has_no_song()
+        {
+            Assert.That(new Cat(_validCatName).Song, Is.EqualTo(string.Empty));
+        }
         [Test] public void Can_be_trained() { }
     }
 
