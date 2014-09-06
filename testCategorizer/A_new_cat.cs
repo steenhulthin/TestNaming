@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,16 +17,6 @@ namespace testCategorizer
         [Test] public void Must_be_given_a_name() { }
         [Test] public void Has_no_song() { }
         [Test] public void Can_be_trained() { }
-    }
-
-    public class Cat
-    {
-        public Cat(string name)
-        {
-            Id = Guid.NewGuid();
-        }
-
-        public Guid Id { get; private set; }
     }
 
     [TestFixture]
