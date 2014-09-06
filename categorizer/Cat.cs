@@ -9,9 +9,16 @@ namespace Categorizer
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("name");
             Id = Guid.NewGuid();
             Song = string.Empty;
+            IsTrained = false;
         }
 
         public Guid Id { get; private set; }
         public string Song { get; private set; }
+        public bool IsTrained { get; private set; }
+
+        public void Train()
+        {
+            IsTrained = true;
+        }
     }
 }

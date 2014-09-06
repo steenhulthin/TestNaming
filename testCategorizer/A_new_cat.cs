@@ -32,7 +32,15 @@ namespace testCategorizer
         {
             Assert.That(new Cat(_validCatName).Song, Is.EqualTo(string.Empty));
         }
-        [Test] public void Can_be_trained() { }
+
+        [Test]
+        public void Can_be_trained()
+        {
+            var cat = new Cat(_validCatName);
+            Assert.That(cat.IsTrained, Is.False);
+            cat.Train();
+            Assert.That(cat.IsTrained);
+        }
     }
 
     [TestFixture]
