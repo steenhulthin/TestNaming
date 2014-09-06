@@ -75,8 +75,12 @@ namespace testCategorizer
     }
 
     [TestFixture]
-    public class A_cat_named_nyan
+    public class A_trained_cat_named_nyan
     {
-        [Test] public void Sings_the_Nyan_cat_song() { }
+        [Test]
+        public void Sings_the_Nyan_cat_song()
+        {
+            
+        }
     }
 }
