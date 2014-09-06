@@ -18,6 +18,7 @@ namespace Categorizer
 
         public void Train()
         {
+            if (IsTrained) { throw new InvalidOperationException("A cat can only be trained once.");}
             IsTrained = true;
         }
     }

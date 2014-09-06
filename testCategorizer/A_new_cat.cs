@@ -51,7 +51,15 @@ namespace testCategorizer
     [TestFixture]
     public class A_trained_cat
     {
-        [Test] public void Rejects_further_training() { }
+        readonly string _validCatName = "N.N.";
+
+        [Test]
+        public void Rejects_further_training()
+        {
+            var trainedCat = new Cat(_validCatName);
+            trainedCat.Train();
+            Assert.That(() => trainedCat.Train(), Throws.InvalidOperationException);
+        }
         [Test] public void Can_sing() { }
     }
 
