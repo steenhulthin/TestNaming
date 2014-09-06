@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,14 @@ namespace testCategorizer
         [Test] public void Gets_an_id()
         {
             var cat = new Cat("N.N.");
-            Assert.That(cat.Id, Is.Not.Null);
+            Assert.That(cat.Id, Is.Not.EqualTo(Guid.Empty));
         }
-        [Test] public void Must_be_given_a_name() { }
+
+        [Test]
+        public void Must_be_given_a_name()
+        {
+            
+        }
         [Test] public void Has_no_song() { }
         [Test] public void Can_be_trained() { }
     }
